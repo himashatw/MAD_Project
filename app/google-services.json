@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "270768298398",
+    "firebase_url": "https://shoppingez-23b1c.firebaseio.com",
+    "project_id": "shoppingez-23b1c",
+    "storage_bucket": "shoppingez-23b1c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:270768298398:android:63f105c36b95cbd82ede8f",
+        "android_client_info": {
+          "package_name": "com.example.shoppingez"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "270768298398-b0atmm2s8qjdctkkmejuj2f4m2v08s9q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shoppingez",
+            "certificate_hash": "f3ce3f4b56b83353452b358a2e38663dbaed5402"
+          }
+        },
+        {
+          "client_id": "270768298398-c6vtkapju4urgrehpmf306st8jeb5sjg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDN_CsXHs7_UkyEhsI4UPR58QObUmtLlqQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "270768298398-c6vtkapju4urgrehpmf306st8jeb5sjg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

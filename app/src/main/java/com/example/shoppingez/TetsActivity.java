@@ -9,6 +9,6 @@ public class TetsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tets);
+        setContentView(R.layout.enquiry2);
     }
 }

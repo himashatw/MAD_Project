@@ -15,7 +15,7 @@
         android:background="@drawable/round_bg"
         android:textColor="@android:color/white"
         android:gravity="center"
-        android:text="Fruits"
+        android:text="Select Item"
         android:textSize="36dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +56,7 @@
                 <ImageView
                     android:id="@+id/item_image"
                     android:layout_width="100dp"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="24dp"
                     android:layout_height="100dp"
                     android:layout_marginStart="15dp"
                     android:src="@drawable/apples" />
@@ -86,7 +86,17 @@
                         android:textColor="#FFFFFF"
                         android:textSize="20sp"
                         android:textStyle="italic" />
-
+                    <Button
+                        android:id="@+id/btnSelect1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Select"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="italic"
+                        android:background="@drawable/square_bg"
+                        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 
                 </LinearLayout>
@@ -102,20 +112,21 @@
             android:layout_weight="0.5">
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="16dp"
                 android:layout_marginTop="24dp"
+                android:layout_marginBottom="1dp"
                 android:background="@drawable/round_bg">
 
                 <ImageView
                     android:id="@+id/item_image2"
                     android:layout_width="100dp"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="24dp"
                     android:layout_height="100dp"
                     android:layout_marginStart="15dp"
-                    android:src="@drawable/orange"/>
+                    android:src="@drawable/lemonpuff"/>
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -123,14 +134,14 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:id="@+id/textView12"
-                        android:text="Orange"
-                        android:textColor="@android:color/black"
-                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_margin="5dp"
-                        android:textSize="30sp"/>
+                        android:text="Lemon Puff"
+                        android:textColor="@android:color/black"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -142,6 +153,17 @@
                         android:layout_margin="5dp"
                         android:textSize="20sp"/>
 
+                    <Button
+                        android:id="@+id/btnSelect2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Select"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="italic"
+                        android:background="@drawable/square_bg"
+                        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
                 </LinearLayout>
 
@@ -149,58 +171,7 @@
 
         </RelativeLayout>
         <!-- Row Three -->
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.5">
 
-            <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="16dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/round_bg">
-
-                <ImageView
-                    android:id="@+id/item_image23"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/grapes"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="50dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView123"
-                        android:text="Grapes"
-                        android:textColor="@android:color/black"
-                        android:textStyle="bold"
-                        android:layout_margin="5dp"
-                        android:textSize="30sp"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView223"
-                        android:text="Rs.260.0"
-                        android:textColor="#FFFFFF"
-                        android:textStyle="italic"
-                        android:layout_margin="5dp"
-                        android:textSize="20sp"/>
-
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </RelativeLayout>
 
     </LinearLayout>
 
@@ -216,5 +187,3 @@
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-

@@ -13,9 +13,9 @@
         android:layout_height="72dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/round_bg"
-        android:textColor="@android:color/white"
+
         android:gravity="center"
-        android:text="Fruits"
+        android:text="All Items"
         android:textSize="36dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,7 +86,15 @@
                         android:textColor="#FFFFFF"
                         android:textSize="20sp"
                         android:textStyle="italic" />
-
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Fruits"
+                        android:textColor="#a9a9a9"
+                        android:textSize="20sp"
+                        android:textStyle="italic" />
 
 
                 </LinearLayout>
@@ -115,7 +123,7 @@
                     android:layout_marginTop="12dp"
                     android:layout_height="100dp"
                     android:layout_marginStart="15dp"
-                    android:src="@drawable/orange"/>
+                    android:src="@drawable/lemonpuff"/>
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -126,7 +134,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/textView12"
-                        android:text="Orange"
+                        android:text="Lemon Puff"
                         android:textColor="@android:color/black"
                         android:textStyle="bold"
                         android:layout_margin="5dp"
@@ -142,6 +150,15 @@
                         android:layout_margin="5dp"
                         android:textSize="20sp"/>
 
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Snacks"
+                        android:textColor="#a9a9a9"
+                        android:textSize="20sp"
+                        android:textStyle="italic" />
 
                 </LinearLayout>
 
@@ -168,7 +185,7 @@
                     android:layout_marginStart="15dp"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/grapes"/>
+                    android:src="@drawable/redbull"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -179,7 +196,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/textView123"
-                        android:text="Grapes"
+                        android:text="Redbull"
                         android:textColor="@android:color/black"
                         android:textStyle="bold"
                         android:layout_margin="5dp"
@@ -189,12 +206,21 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/textView223"
-                        android:text="Rs.260.0"
+                        android:text="Rs.360.0"
                         android:textColor="#FFFFFF"
                         android:textStyle="italic"
                         android:layout_margin="5dp"
                         android:textSize="20sp"/>
 
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Bevarages"
+                        android:textColor="#a9a9a9"
+                        android:textSize="20sp"
+                        android:textStyle="italic" />
 
                 </LinearLayout>
 
@@ -216,5 +242,3 @@
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-

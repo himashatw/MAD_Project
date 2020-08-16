@@ -16,29 +16,25 @@
         <activity android:name=".AdminNewItem"/>
         <activity android:name=".Empty_Cart"></activity>
         <activity android:name=".MyOrder" />
-        <activity android:name=".Registration" />
+        <activity android:name=".Registration" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity android:name=".Cart" />
         <activity android:name=".Edit_Profile" />
         <activity android:name=".profile" />
         <activity android:name=".ItemsList" />
         <activity
             android:name=".HomePage"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:screenOrientation="portrait"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".AdminItems">
-
-
         </activity>
-        <activity android:name=".AdminDashboard" />
-        <activity android:name=".ItemsList" />
-        <activity
-            android:name=".HomePage"
-            android:screenOrientation="portrait" />
+        <activity android:name=".AdminDashboard"/>
         <activity android:name=".LoginAdmin" >
 
 

@@ -11,10 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".ItemsList">
-
-        </activity>
+        <activity android:name=".Empty_Cart"></activity>
+        <activity android:name=".MyOrder" />
+        <activity android:name=".Registration" />
+        <activity android:name=".Cart" />
+        <activity android:name=".Edit_Profile" />
+        <activity android:name=".profile" />
+        <activity android:name=".ItemsList" />
         <activity
             android:name=".HomePage"
             android:screenOrientation="portrait">
@@ -23,7 +26,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity android:name=".LoginAdmin" />
         <activity

@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">ShoppingEZ</string>
+    <string name="total">Total</string>
+    <string name="discount">Discount</string>
+    <string name="deliveryChrg">Delivery Charge</string>
+    <string name="netTot">NET TOTAL</string>
+    <string name="deliveryAddress">Delivery Address</string>
+    <string name="addaddress">Please add your Address here..</string>
+    <string name="payment">Payment</string>
+    <string name="cashonDelivery">$$$  Cash on Delivery   $$$</string>
+    <string name="proceed">PROCEED</string>
+    <string name="add">ADD</string>
+    <string name="thankyou">Thank You</string>
+    <string name="forYourOrder">For your Order</string>
+    <string name="yourAddress">Your Address</string>
+    <string name="address">12/5 , Homagama , Piliyandala</string>
+    <string name="change">Change</string>
+    <string name="complete">  COMPLETE  </string>
+    <string name="cancelOrder">Cancel Order</string>
+    <string name="email">Email</string>
+    <string name="message">Message</string>
+    <string name="enquiry">Enquiry</string>
+    <string name="send">Send</string>
+    <string name="enquirymanagement">Enquiry Management</string>
+    <string name="xxxxx">XXXXX.XX</string>
+    <string name="checkout"> Checkout </string>
+    <string name="details">Your order will be delivered to your doostep as soon as possible</string>
+    <string name="orderSuccess">Order Sccess</string>
+    <string name="samplemail">Sample Email  </string>
+    <string name="samplemsg">Sample Message</string>
+    <string name="reply">Reply</string>
+    <string name="delete">Delete</string>
+    <string name="empty">.</string>
 </resources>

@@ -11,20 +11,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomePage">
+        <activity android:name=".EditUpdateCat">
+        </activity>
+        <activity android:name=".ChooseCat" >
+        </activity>
+        <activity android:name=".AddNewCat" />
+        <activity android:name=".ViewAllCat" />
+        <activity android:name=".ItemProfile">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".LoginAdmin">
-
-        </activity>
+        <activity android:name=".HomePage" />
+        <activity android:name=".LoginAdmin" />
         <activity
             android:name=".LoginCustomer"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".LoginOptions"
             android:screenOrientation="portrait" />

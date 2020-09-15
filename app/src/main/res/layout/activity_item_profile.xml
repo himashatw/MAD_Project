@@ -61,7 +61,7 @@
         android:background="@drawable/ic_bevarages"
         android:paddingHorizontal="1000dp"
         android:scaleType="centerCrop"
-        android:srcCompact="@drawable/ic_snacks" />
+        app:srcCompat="@drawable/ic_snacks" />
 
     <TextView
         android:id="@+id/pro_name"
@@ -88,7 +88,7 @@
         android:textSize="30sp"
         android:textStyle="bold" />
 
-    <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+ <!--   <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
         android:id="@+id/addbtn"
         android:layout_width="wrap_content"
         android:layout_height="45dp"
@@ -107,7 +107,7 @@
         app:backGroundColor="#2196F3"
         app:initialNumber="1"
         app:textColor="#322E2E"
-        app:textSize="10sp"></com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+        app:textSize="10sp" />-->
 
     <TextView
         android:id="@+id/qnty"
@@ -155,6 +155,5 @@
         android:text="Buy Now"
         android:textSize="20sp"
         android:textStyle="bold|italic" />
-
 
 </RelativeLayout>

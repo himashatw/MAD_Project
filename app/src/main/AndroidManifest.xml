@@ -11,12 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AdminEditItem"/>
-        <activity android:name=".AdminSelectEdit"/>
-        <activity android:name=".AdminNewItem"/>
+        <activity android:name=".AdminEditItem" />
+        <activity android:name=".AdminSelectEdit" />
+        <activity android:name=".AdminNewItem" />
         <activity android:name=".Empty_Cart"></activity>
         <activity android:name=".MyOrder" />
-        <activity android:name=".Registration" ></activity>
+        <activity android:name=".Registration"></activity>
         <activity android:name=".Cart" />
         <activity android:name=".Edit_Profile" />
         <activity android:name=".profile" />
@@ -32,11 +32,11 @@
         </activity>
 
         <activity android:name=".AdminItems"></activity>
-        <activity android:name=".AdminDashboard"/>
-        <activity android:name=".LoginAdmin" ></activity>
+        <activity android:name=".AdminDashboard" />
+        <activity android:name=".LoginAdmin"></activity>
         <activity
             android:name=".LoginCustomer"
-            android:screenOrientation="portrait" ></activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".LoginOptions"
             android:screenOrientation="portrait" />

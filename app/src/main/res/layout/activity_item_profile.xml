@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="left"
+    tools:context=".ItemProfile">
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="417dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="3dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/cat1"
+        android:layout_width="283dp"
+        android:layout_height="39dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="669dp"
+        android:text="Item Profile"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.796"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="66dp"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="662dp"
+        android:background="@drawable/abc_vector_test"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.032" />
+
+    <ImageView
+        android:id="@+id/product_img"
+        android:layout_width="fill_parent"
+        android:layout_height="260dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="388dp"
+        android:background="@drawable/ic_bevarages"
+        android:paddingHorizontal="1000dp"
+        android:scaleType="centerCrop"
+        android:srcCompact="@drawable/ic_snacks" />
+
+    <TextView
+        android:id="@+id/pro_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="347dp"
+        android:text="Shower Gel "
+        android:textColor="@color/common_google_signin_btn_text_light_focused"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/pro_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginBottom="302dp"
+        android:text="Rs.790.00"
+        android:textColor="@color/common_google_signin_btn_text_light_focused"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+        android:id="@+id/addbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="164dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="449dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="237dp"
+        android:elevation="6dp"
+        android:gravity="center"
+        android:visibility="visible"
+        app:backGroundColor="#2196F3"
+        app:initialNumber="1"
+        app:textColor="#322E2E"
+        app:textSize="10sp"></com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+
+    <TextView
+        android:id="@+id/qnty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginBottom="238dp"
+        android:text="Quantity : "
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/addtoCart"
+        android:layout_width="206dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="594dp"
+        android:layout_marginEnd="205dp"
+        android:layout_marginBottom="68dp"
+        android:background="@color/colorPrimary"
+
+        android:text="Add to Cart"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/buyNow"
+        android:layout_width="202dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="206dp"
+        android:layout_marginTop="594dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="68dp"
+        android:background="#569FDA"
+
+        android:text="Buy Now"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+
+
+</RelativeLayout>

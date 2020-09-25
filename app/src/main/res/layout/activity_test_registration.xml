@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginAdmin">
+    tools:context=".TestRegistration">
+
 
     <View
         android:id="@+id/topView"
@@ -46,7 +47,7 @@
         android:layout_marginTop="44dp"
         android:layout_marginEnd="8dp"
         android:gravity="center_horizontal"
-        android:text="Login as an Admin"
+        android:text="Registration Admin"
         android:textColor="@android:color/white"
         android:textSize="36sp"
         android:textStyle="bold"
@@ -93,14 +94,14 @@
         app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnSignUp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/round_bg"
-        android:text="Login"
+        android:text="Sign Up"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -120,17 +121,14 @@
         app:srcCompat="@drawable/ic_baseline_arrow_back_whie_24" />
 
     <TextView
-        android:id="@+id/txtSignUp"
+        android:id="@+id/txtSignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/SignUp"
+        android:text="@string/SignIn"
         android:textSize="18sp"
-        android:layout_marginBottom="34dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSignUp"
         app:layout_constraintVertical_bias="0.354" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

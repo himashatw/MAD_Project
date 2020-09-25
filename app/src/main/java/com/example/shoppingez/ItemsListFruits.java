@@ -1,7 +1,5 @@
 package com.example.shoppingez;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -17,19 +14,18 @@ import android.widget.Toast;
 
 import com.example.shoppingez.adapter.ImageAdapter;
 import com.example.shoppingez.model.Items;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdminItems extends AppCompatActivity implements ImageAdapter.OnItemClickListener {
+public class ItemsListFruits extends AppCompatActivity implements ImageAdapter.OnItemClickListener{
+
 
     private RecyclerView mRecyclerView;
     private ImageAdapter mAdapter;
@@ -44,8 +40,7 @@ public class AdminItems extends AppCompatActivity implements ImageAdapter.OnItem
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_items);
-
+        setContentView(R.layout.activity_items_list_fruits);
 
         mRecyclerView = findViewById(R.id.rvImages);
         mRecyclerView.setHasFixedSize(true);
@@ -59,17 +54,17 @@ public class AdminItems extends AppCompatActivity implements ImageAdapter.OnItem
         ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), AdminDashboard.class);
+                Intent intent = new Intent(getApplicationContext(), HomePage.class);
                 startActivity(intent);
             }
         });
 
         mUploads = new ArrayList<>();
 
-        mAdapter = new ImageAdapter(AdminItems.this, mUploads);
+        mAdapter = new ImageAdapter(ItemsListFruits.this, mUploads);
 
         mRecyclerView.setAdapter(mAdapter);
-        mAdapter.setOnItemClickListener(AdminItems.this);
+        mAdapter.setOnItemClickListener(ItemsListFruits.this);
 
         mStorage = FirebaseStorage.getInstance();
         mDatabaseRef = FirebaseDatabase.getInstance().getReference().child("Items");
@@ -83,7 +78,10 @@ public class AdminItems extends AppCompatActivity implements ImageAdapter.OnItem
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     Items items = postSnapshot.getValue(Items.class);
                     items.setKey(postSnapshot.getKey());
-                    mUploads.add(items);
+                    if (items.getItemCategory().equals("Fruits")){
+                        mUploads.add(items);
+                    }
+
                 }
 
                 mAdapter.notifyDataSetChanged();
@@ -99,56 +97,24 @@ public class AdminItems extends AppCompatActivity implements ImageAdapter.OnItem
             }
         });
 
+
     }
 
     @Override
     public void onItemClick(int position) {
-
-    }
-
-    @Override
-    public void onEditClick(int position) {
-        Items selectedItem = mUploads.get(position);
-        final String selectedKey = selectedItem.getKey();
-        String selectedName = selectedItem.getItemName();
-        String selectedUrl = selectedItem.getImgUrl();
-        double selectedPrice = selectedItem.getItemPrice();
-        String selectedCategory = selectedItem.getItemCategory();
-        Log.d("price", "onEditClick: " + selectedPrice);
-
-        Bundle bundle = new Bundle();
-        bundle.putString("itmKey", selectedKey);
-        bundle.putString("itmName", selectedName);
-        bundle.putString("itmCategory", selectedCategory);
-        bundle.putDouble("itmPrice", selectedPrice);
-        bundle.putString("itmUrl",selectedUrl);
-
-        Intent intent = new Intent(AdminItems.this, AdminEditItem.class);
-
-        intent.putExtras(bundle);
+        Intent intent = new Intent(getApplicationContext(), ItemProfile.class);
         startActivity(intent);
 
     }
 
     @Override
-    public void onDeleteClick(int position) {
-        Items selectedItem = mUploads.get(position);
-        final String selectedKey = selectedItem.getKey();
-
-        StorageReference imageRef = mStorage.getReferenceFromUrl(selectedItem.getImgUrl());
-        imageRef.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-                mDatabaseRef.child(selectedKey).removeValue();
-                Toast.makeText(AdminItems.this, "Item Deleted", Toast.LENGTH_SHORT).show();
-            }
-        });
+    public void onEditClick(int position) {
 
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        mDatabaseRef.removeEventListener(mDBListener);
+    public void onDeleteClick(int position) {
+
     }
 }
+

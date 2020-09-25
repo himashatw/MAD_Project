@@ -23,18 +23,17 @@
                 android:id="@+id/txtDashboard"
                 android:textSize="27sp"
                 android:textColor="#FFFFFF"
-                android:text="Admin DashBoard"
+                android:text="@string/AdminDashboard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
 
-
-
-            <ImageView
-                app:srcCompat="@drawable/ic_baseline_settings_applications_24"
+            <Button
+                android:id="@+id/btnLogOut"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_alignParentRight="true"/>
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_baseline_settings_applications_24" />
             
             
         </RelativeLayout>
@@ -42,7 +41,7 @@
         <GridLayout
             android:columnCount="2"
             android:rowCount="3"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="80dp"
             android:alignmentMode="alignMargins"
             android:columnOrderPreserved="false"
             android:layout_width="match_parent"
@@ -58,6 +57,7 @@
                 android:layout_margin="12dp">
 
                 <LinearLayout
+                    android:id="@+id/loutViewItems"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -72,7 +72,7 @@
                         android:textColor="#6f6f6f"
                         android:layout_marginTop="12dp"
                         android:textSize="18sp"
-                        android:text="View Items"
+                        android:text="@string/AdminViewItem"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
@@ -93,6 +93,7 @@
                 android:layout_margin="12dp">
 
                 <LinearLayout
+                    android:id="@+id/loutAddItem"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -107,7 +108,7 @@
                         android:textColor="#6f6f6f"
                         android:layout_marginTop="12dp"
                         android:textSize="18sp"
-                        android:text="Add Item"
+                        android:text="@string/AdminAddItem"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
@@ -128,6 +129,7 @@
                 android:layout_margin="12dp">
 
                 <LinearLayout
+                    android:id="@+id/loutEditItem"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -142,7 +144,7 @@
                         android:textColor="#6f6f6f"
                         android:layout_marginTop="12dp"
                         android:textSize="18sp"
-                        android:text="Edit Items"
+                        android:text="@string/AdminEditItem"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
@@ -163,6 +165,7 @@
                 android:layout_margin="12dp">
 
                 <LinearLayout
+                    android:id="@+id/loutViewCat"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -177,7 +180,7 @@
                         android:textColor="#6f6f6f"
                         android:layout_marginTop="12dp"
                         android:textSize="18sp"
-                        android:text="View Categories"
+                        android:text="@string/AdminViewCat"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
@@ -198,6 +201,7 @@
                 android:layout_margin="12dp">
 
                 <LinearLayout
+                    android:id="@+id/loutAddNewCat"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -212,7 +216,7 @@
                         android:textColor="#6f6f6f"
                         android:layout_marginTop="12dp"
                         android:textSize="18sp"
-                        android:text="Add Category "
+                        android:text="@string/AdminAddCat"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
@@ -233,6 +237,7 @@
                 android:layout_margin="12dp">
 
                 <LinearLayout
+                    android:id="@+id/loutEditCat"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -247,7 +252,7 @@
                         android:textColor="#6f6f6f"
                         android:layout_marginTop="12dp"
                         android:textSize="18sp"
-                        android:text="Edit Category"
+                        android:text="@string/AdminEditCat"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
@@ -262,5 +267,6 @@
 
 
     </LinearLayout>
+
 
 </ScrollView>

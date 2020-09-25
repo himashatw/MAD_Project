@@ -30,5 +30,19 @@
     <string name="samplemsg">Sample Message</string>
     <string name="reply">Reply</string>
     <string name="delete">Delete</string>
+    <string name="SignIn">Sign In Here</string>
+    <string name="SignUp">Dont Have a Account? Sign Up Here</string>
     <string name="empty">.</string>
+    <string name="AdminAllItems">All Items</string>
+    <string name="AdminDashboard">Admin DashBoard</string>
+    <string name="AdminViewItem">View Items</string>
+    <string name="AdminViewCat">View Categories</string>
+    <string name="AdminAddItem">Add Item</string>
+    <string name="AdminAddCat">Add Category</string>
+    <string name="AdminEditItem">Edit Items</string>
+    <string name="AdminEditCat">Edit Category</string>
+    <string name="AdminEditItemHeader">Edit Selected Item</string>
+    <string name="ListFruitsHeader">Fruits</string>
+
+
 </resources>

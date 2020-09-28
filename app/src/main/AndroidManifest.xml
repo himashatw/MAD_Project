@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.shoppingez">
-
-    <uses-permission android:name="android.permission.INTERNET" />
-
+    package="com.example.shoppingez" >
 
     <application
         android:allowBackup="true"
@@ -11,48 +8,27 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".TestRegistration">
+        android:theme="@style/AppTheme" >
+        <activity android:name=".enquiry2" >
+
 
         </activity>
-        <activity android:name=".AdminEditItem" android:exported="true" />
-        <activity android:name=".AdminSelectEdit" />
-        <activity android:name=".AdminNewItem" android:exported="true">
+        <activity android:name=".checkout2" >
 
         </activity>
-        <activity android:name=".Empty_Cart" />
-        <activity android:name=".MyOrder" />
-        <activity android:name=".Registration" />
-        <activity android:name=".Cart" />
-        <activity android:name=".Edit_Profile" />
-        <activity android:name=".profile" />
-        <activity android:name=".ItemsListFruits" android:exported="true"/>
-        <activity
-            android:name=".HomePage"
-            android:screenOrientation="portrait" android:exported="true">
-
-        </activity>
-        <activity android:name=".AdminItems" android:exported="true"/>
-        <activity android:name=".AdminDashboard" android:exported="true"/>
-        <activity android:name=".LoginAdmin" >
+        <activity android:name=".checkout1" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity
-            android:name=".LoginCustomer"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".LoginOptions"
-            android:screenOrientation="portrait" />
-        <activity android:name=".AddItemUI" />
+        <activity android:name=".enquiry1" >
+
+
+        </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".ViewAllCat" />
-        <activity android:name=".ChooseCat" />
-        <activity android:name=".AddNewCat" />
-        <activity android:name=".ItemProfile" android:exported="true" />
     </application>
 
 </manifest>

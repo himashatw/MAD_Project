@@ -4,11 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
+import android.app.Notification;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,6 +27,7 @@ public class checkout2 extends AppCompatActivity {
     EditText textAddress;
     DatabaseReference dbRef;
     Payment payment;
+    Button change;
 
 
     @Override
@@ -32,14 +36,15 @@ public class checkout2 extends AppCompatActivity {
         setContentView(R.layout.activity_checkout2);
 
         textAddress=findViewById(R.id.txtAddress);
+        change=findViewById(R.id.IDchange);
 
         Intent i = getIntent();
-        final String address = i.getStringExtra(checkout1.EXTRA_MESSAGE1);
-        Payment payment = i.getParcelableExtra("pay");
+       // final String address = i.getStringExtra(checkout1.EXTRA_MESSAGE1);
+        final Payment payment = i.getParcelableExtra("pay");
 
-        TextView textView = findViewById(R.id.viewAddress);
+        //TextView textView = findViewById(R.id.viewAddress);
 
-        textView.setText(address);
+        //textView.setText(address);
 
         /// To retreve data from Firebase
         //String PayID = PayID;
@@ -47,17 +52,20 @@ public class checkout2 extends AppCompatActivity {
       textAddress.setText(payment.getAddress());
 
 
+change.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        dbRef=FirebaseDatabase.getInstance().getReference().child("Payment").child(payment.getPid());
+
+        payment.setAddress(textAddress.getText().toString().trim());
+        dbRef.setValue(payment);
+
+        Toast.makeText(getApplicationContext(),"Changed your delivery address",Toast.LENGTH_SHORT).show();;
+    }
+});
     }
 
 
-
-    public void change(View view){
-
-        dbRef= FirebaseDatabase.getInstance().getReference();
-        //dbRef.child("Enquiry").child("enq1").child("name").setValue(textAddress.getText().toString().trim());
-        dbRef.child(payment.getAddress()).setValue(textAddress.getText().toString());
-        Toast.makeText(this, "you Changed address", Toast.LENGTH_SHORT).show();
-    }
 
 
     public void complete(View view){
@@ -65,23 +73,23 @@ public class checkout2 extends AppCompatActivity {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(
                 checkout2.this
         )
-                .setSmallIcon(R.drawable.cash)
+                .setSmallIcon(R.drawable.logo)
                 .setContentTitle("Order Verification")
                 .setContentText(msg)
                 .setAutoCancel(true);
 //
-    /*
-        **** This "NotificationActivity" is the activity which goes after click the Notification ****
 
-         Intent intent =new Intent(checkout2.this,NotificationActivity.class);
+     //   **** This "NotificationActivity" is the activity which goes after click the Notification ****
+
+         Intent intent =new Intent(checkout2.this, clickNotification.class);
 
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.putExtra("message",msg);
 
          PendingIntent pendingIntent = PendingIntent.getActivity(checkout2.this ,
-               0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
+               0,intent, PendingIntent.FLAG_UPDATE_CURRENT);
         builder.setContentIntent(pendingIntent);
-    */
+
         //
         NotificationManager notificationManager = (NotificationManager)getSystemService(
                 Context.NOTIFICATION_SERVICE
@@ -90,6 +98,7 @@ public class checkout2 extends AppCompatActivity {
         notificationManager.notify(0 ,builder.build());
 
 
+        Toast.makeText(getApplicationContext() , "Order successfully purchased",Toast.LENGTH_LONG).show();
     }
 
 

@@ -68,7 +68,7 @@ public class AdminDashboard extends AppCompatActivity {
         loutViewCat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(AdminDashboard.this, ViewAllCat.class);
+                Intent intent = new Intent(AdminDashboard.this, enquiry2.class);
                 startActivity(intent);
             }
         });

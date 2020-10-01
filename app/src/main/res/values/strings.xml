@@ -46,8 +46,7 @@
     <string name="ListVegetableHeader">Vegetable</string>
     <string name="enterYourAddress">Enter Your Address</string>
     <string name="changeAddress">Change</string>
-
-
+    <string name="enquiries">Enquiries</string>
 
 
 </resources>

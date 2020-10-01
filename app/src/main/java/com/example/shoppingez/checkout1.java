@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -23,6 +24,7 @@ public class checkout1 extends AppCompatActivity {
     private TextView Bill,Transport,Total;
     private DatabaseReference dbRef;
     private Payment payment;
+    FirebaseAuth firebaseAuth;
     private ProgressDialog loadingBar;
 
     @Override
@@ -32,6 +34,9 @@ public class checkout1 extends AppCompatActivity {
         Bill = findViewById(R.id.bill);
         Transport= findViewById(R.id.Delivery);
         Total = findViewById(R.id.Total);
+
+        //Session
+       // firebaseAuth=FirebaseAuth.getInstance();
 
         //*****   Alnkage value eka ganna ona intent ekakin cart eken "bill" ektaa
         int bill =1000;
@@ -55,6 +60,9 @@ public class checkout1 extends AppCompatActivity {
 
         address = findViewById(R.id.addAddress);
         String addr = address.getText().toString();
+
+        //session
+       // String id=firebaseAuth.getCurrentUser().getUid();
 
         i.putExtra(EXTRA_MESSAGE1 , addr);
 
@@ -81,10 +89,11 @@ public class checkout1 extends AppCompatActivity {
 
                 //trim() - remove all leading and all spaces
                 payment.setAddress(address.getText().toString().trim());
-
+                payment.setTotal(Integer.parseInt(Total.getText().toString().trim()));
 
                 payment.setPid (dbRef.push().getKey());
                 dbRef.child(payment.getPid()).setValue(payment);
+
 
                 Toast.makeText(this, "Successfuly inserted", Toast.LENGTH_SHORT).show();
 

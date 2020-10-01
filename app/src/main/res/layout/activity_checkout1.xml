@@ -164,6 +164,7 @@
         android:text="@string/cashonDelivery"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="25dp"
         app:layout_constraintHorizontal_bias="0.402"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="parent"
@@ -261,10 +262,12 @@
     <Button
         android:id="@+id/button"
         style="@style/buttonStyle1"
+        android:layout_width="341dp"
+        android:layout_height="60dp"
         android:layout_marginStart="10dp"
+
         android:layout_marginEnd="10dp"
         android:background="@drawable/btn_rounded"
-
         android:onClick="proceed"
         android:text="@string/proceed"
         app:layout_constraintBottom_toBottomOf="parent"

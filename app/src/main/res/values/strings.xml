@@ -43,6 +43,8 @@
     <string name="AdminEditCat">Edit Category</string>
     <string name="AdminEditItemHeader">Edit Selected Item</string>
     <string name="ListFruitsHeader">Fruits</string>
+    <string name="ListVegetableHeader">Vegetable</string>
+
 
 
 </resources>

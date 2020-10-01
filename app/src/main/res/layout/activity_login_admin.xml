@@ -113,6 +113,7 @@
         android:id="@+id/imageView7"
         android:layout_width="38dp"
         android:layout_height="27dp"
+        android:clickable="true"
         android:layout_marginStart="12dp"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"

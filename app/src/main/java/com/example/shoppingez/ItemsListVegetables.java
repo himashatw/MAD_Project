@@ -1,5 +1,8 @@
 package com.example.shoppingez;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -7,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -25,8 +27,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ItemsListFruits extends AppCompatActivity implements ImageAdapter.OnItemClickListener{
-
+public class ItemsListVegetables extends AppCompatActivity implements ImageAdapter.OnItemClickListener{
 
     private RecyclerView mRecyclerView;
     private ImageAdapter mAdapter;
@@ -41,7 +42,7 @@ public class ItemsListFruits extends AppCompatActivity implements ImageAdapter.O
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_items_list_fruits);
+        setContentView(R.layout.activity_items_list_vegetables);
 
         mRecyclerView = findViewById(R.id.rvImages);
         mRecyclerView.setHasFixedSize(true);
@@ -62,10 +63,10 @@ public class ItemsListFruits extends AppCompatActivity implements ImageAdapter.O
 
         mUploads = new ArrayList<>();
 
-        mAdapter = new ImageAdapter(ItemsListFruits.this, mUploads);
+        mAdapter = new ImageAdapter(ItemsListVegetables.this, mUploads);
 
         mRecyclerView.setAdapter(mAdapter);
-        mAdapter.setOnItemClickListener(ItemsListFruits.this);
+        mAdapter.setOnItemClickListener(ItemsListVegetables.this);
 
         mStorage = FirebaseStorage.getInstance();
         mDatabaseRef = FirebaseDatabase.getInstance().getReference().child("Items");
@@ -79,7 +80,7 @@ public class ItemsListFruits extends AppCompatActivity implements ImageAdapter.O
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     Items items = postSnapshot.getValue(Items.class);
                     items.setKey(postSnapshot.getKey());
-                    if (items.getItemCategory().equals("Fruits")){
+                    if (items.getItemCategory().equals("Vegetables")){
                         mUploads.add(items);
                     }
 
@@ -103,11 +104,9 @@ public class ItemsListFruits extends AppCompatActivity implements ImageAdapter.O
 
     @Override
     public void onItemClick(int position) {
+
         Intent intent = new Intent(getApplicationContext(), ItemProfile.class);
         startActivity(intent);
-        Items selectedItem = mUploads.get(position);
-        final String selectedKey = selectedItem.getKey();
-        Log.d("TAGkey", "onItemClick: "+selectedKey);
 
     }
 

@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +23,7 @@ public class LoginAdmin extends AppCompatActivity {
 
     EditText emailId, password;
     Button btnSignIn;
+    ImageView imgBack;
     FirebaseAuth mFirebaseAuth;
     TextView SignUp;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
@@ -36,19 +39,38 @@ public class LoginAdmin extends AppCompatActivity {
         btnSignIn = findViewById(R.id.btnLogin);
         SignUp = findViewById(R.id.txtSignUp);
 
+        imgBack = findViewById(R.id.imageView7);
+
+        imgBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),HomePage.class);
+                startActivity(intent);
+            }
+        });
+
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
 
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser mFireBaseUser = mFirebaseAuth.getCurrentUser();
-                if (mFireBaseUser != null){
-                    Toast toast = Toast.makeText(LoginAdmin.this,"You are logged in ",Toast.LENGTH_SHORT);
+
+                if (mFireBaseUser != null) {
+                    Toast toast = Toast.makeText(LoginAdmin.this, "You are logged in ", Toast.LENGTH_SHORT);
                     toast.show();
-                    Intent intent = new Intent(LoginAdmin.this,AdminDashboard.class);
-                    startActivity(intent);
-                }
-                else {
-                    Toast toast = Toast.makeText(LoginAdmin.this,"Please Login ",Toast.LENGTH_SHORT);
+                    String myEmail = mFireBaseUser.getEmail();
+                    Log.d("firebaseuser", "onAuthStateChanged: " + myEmail);
+                    if (myEmail.equals("himashatw@gamil.com")) {
+
+                        Intent intent = new Intent(LoginAdmin.this, AdminDashboard.class);
+                        startActivity(intent);
+                    } else {
+                        Intent intent = new Intent(LoginAdmin.this, HomePage.class);
+                        startActivity(intent);
+                    }
+
+                } else {
+                    Toast toast = Toast.makeText(LoginAdmin.this, "Please Login ", Toast.LENGTH_SHORT);
                     toast.show();
                 }
             }
@@ -58,7 +80,7 @@ public class LoginAdmin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String email = emailId.getText().toString();
+                final String email = emailId.getText().toString();
                 String pwd = password.getText().toString();
                 if (email.isEmpty()) {
                     emailId.setError("Please enter an Email");
@@ -71,25 +93,39 @@ public class LoginAdmin extends AppCompatActivity {
                     toast.show();
                 } else if (!(email.isEmpty() && pwd.isEmpty())) {
 
-                    mFirebaseAuth.signInWithEmailAndPassword(email,pwd).addOnCompleteListener(LoginAdmin.this, new OnCompleteListener<AuthResult>() {
+                    mFirebaseAuth.signInWithEmailAndPassword(email, pwd).addOnCompleteListener(LoginAdmin.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (!task.isSuccessful()){
+                            if (!task.isSuccessful()) {
                                 Toast toast = Toast.makeText(getApplicationContext(), "Loging Error Please try again", Toast.LENGTH_SHORT);
                                 toast.show();
-                            }
-                            else
-                            {
-                                Intent intent = new Intent(LoginAdmin.this,AdminDashboard.class);
-                                startActivity(intent);
+                            } else {
+                                if (email.equals("himashatw@gmail.com")) {
+
+                                    Intent intent = new Intent(LoginAdmin.this, AdminDashboard.class);
+                                    startActivity(intent);
+
+                                } else {
+                                    Intent intent = new Intent(LoginAdmin.this, HomePage.class);
+                                    startActivity(intent);
+                                }
                             }
                         }
                     });
 
-                            } else {
-                                startActivity(new Intent(LoginAdmin.this,AdminDashboard.class));
+                } else {
 
-                            }
+                    if (email.equals("himashatw@gmail.com")) {
+
+                        Intent intent = new Intent(LoginAdmin.this, AdminDashboard.class);
+                        startActivity(intent);
+
+                    } else {
+                        Intent intent = new Intent(LoginAdmin.this, HomePage.class);
+                        startActivity(intent);
+                    }
+
+                }
 
             }
         });
@@ -97,7 +133,7 @@ public class LoginAdmin extends AppCompatActivity {
         SignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LoginAdmin.this,TestRegistration.class);
+                Intent intent = new Intent(LoginAdmin.this, TestRegistration.class);
                 startActivity(intent);
             }
         });

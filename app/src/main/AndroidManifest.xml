@@ -4,7 +4,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,29 +11,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TestRegistration">
-
-        </activity>
-        <activity android:name=".AdminEditItem" android:exported="true" />
+        <activity android:name=".ItemsListVegetables"></activity>
+        <activity android:name=".TestRegistration"></activity>
+        <activity
+            android:name=".AdminEditItem"
+            android:exported="true" />
         <activity android:name=".AdminSelectEdit" />
-        <activity android:name=".AdminNewItem" android:exported="true">
-
-        </activity>
+        <activity
+            android:name=".AdminNewItem"
+            android:exported="true"></activity>
         <activity android:name=".Empty_Cart" />
         <activity android:name=".MyOrder" />
         <activity android:name=".Registration" />
         <activity android:name=".Cart" />
         <activity android:name=".Edit_Profile" />
         <activity android:name=".profile" />
-        <activity android:name=".ItemsListFruits" android:exported="true"/>
+        <activity
+            android:name=".ItemsListFruits"
+            android:exported="true" />
         <activity
             android:name=".HomePage"
-            android:screenOrientation="portrait" android:exported="true">
-
-        </activity>
-        <activity android:name=".AdminItems" android:exported="true"/>
-        <activity android:name=".AdminDashboard" android:exported="true"/>
-        <activity android:name=".LoginAdmin" >
+            android:exported="true"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".AdminItems"
+            android:exported="true" />
+        <activity
+            android:name=".AdminDashboard"
+            android:exported="true" />
+        <activity
+            android:name=".LoginAdmin"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -52,7 +59,9 @@
         <activity android:name=".ViewAllCat" />
         <activity android:name=".ChooseCat" />
         <activity android:name=".AddNewCat" />
-        <activity android:name=".ItemProfile" android:exported="true" />
+        <activity
+            android:name=".ItemProfile"
+            android:exported="true" />
     </application>
 
 </manifest>

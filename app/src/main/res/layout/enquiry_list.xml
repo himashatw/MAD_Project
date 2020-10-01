@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="230dp"
+    android:layout_margin="5dp"
+    android:background="@color/grey"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="403dp"
+        android:layout_height="220dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/emailID"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="20dp"
+            android:layout_margin="20dp"
+            android:layout_alignParentTop="true"
+            android:textStyle="italic"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/MessageID"
+            android:layout_width="match_parent"
+            android:textSize="22dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="70dp"
+            android:textColor="@color/Black"
+            android:text="TextView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/DeleteID"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:layout_marginLeft="40dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_rounded_red"
+            android:text="@string/delete"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/replyID"
+            android:layout_width="wrap_content"
+            android:layout_height="61dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/btn_rounded"
+            android:text="@string/reply"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

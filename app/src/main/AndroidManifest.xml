@@ -11,18 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ItemsListVegetables"></activity>
-        <activity android:name=".TestRegistration"></activity>
+        <activity android:name=".UserProfile"></activity>
+        <activity android:name=".ItemsListVegetables" />
+        <activity android:name=".TestRegistration" />
         <activity
             android:name=".AdminEditItem"
             android:exported="true" />
         <activity android:name=".AdminSelectEdit" />
         <activity
             android:name=".AdminNewItem"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity android:name=".Empty_Cart" />
         <activity android:name=".MyOrder" />
-        <activity android:name=".Registration" />
+        <activity android:name=".Registration">
+
+        </activity>
         <activity android:name=".Cart" />
         <activity android:name=".Edit_Profile" />
         <activity android:name=".profile" />
@@ -32,7 +35,7 @@
         <activity
             android:name=".HomePage"
             android:exported="true"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".AdminItems"
             android:exported="true" />
@@ -81,10 +84,7 @@
 
         </activity>
 
-        <activity android:name=".clickNotification">
 
-
-        </activity>
 
 
     </application>

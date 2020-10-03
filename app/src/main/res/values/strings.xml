@@ -34,7 +34,7 @@
     <string name="SignUp">Dont Have a Account? Sign Up Here</string>
     <string name="empty">.</string>
     <string name="AdminAllItems">All Items</string>
-    <string name="AdminDashboard">Admin DashBoard</string>
+    <string name="AdminDashboard">Admin \nDashBoard</string>
     <string name="AdminViewItem">View Items</string>
     <string name="AdminViewCat">View Categories</string>
     <string name="AdminAddItem">Add Item</string>

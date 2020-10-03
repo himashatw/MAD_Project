@@ -43,6 +43,12 @@
             android:name=".LoginAdmin"
             android:exported="true">
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
         </activity>
         <activity
             android:name=".LoginCustomer"
@@ -71,13 +77,16 @@
 
         </activity>
         <activity android:name=".checkout1" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
+
+        <activity android:name=".clickNotification">
+
+
+        </activity>
+
+
     </application>
 
 </manifest>

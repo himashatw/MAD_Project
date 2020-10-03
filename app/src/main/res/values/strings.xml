@@ -7,7 +7,7 @@
     <string name="deliveryAddress">Delivery Address</string>
     <string name="addaddress">Please add your Address here..</string>
     <string name="payment">Payment</string>
-    <string name="cashonDelivery">$$$  Cash on Delivery   $$$</string>
+    <string name="cashonDelivery">  Cash on Delivery   </string>
     <string name="proceed">PROCEED</string>
     <string name="add">ADD</string>
     <string name="thankyou">Thank You</string>
@@ -47,6 +47,7 @@
     <string name="enterYourAddress">Enter Your Address</string>
     <string name="changeAddress">Change</string>
     <string name="enquiries">Enquiries</string>
+    <string name="Login">Login</string>
 
 
 </resources>

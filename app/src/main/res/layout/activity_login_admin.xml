@@ -46,12 +46,12 @@
         android:layout_marginTop="44dp"
         android:layout_marginEnd="8dp"
         android:gravity="center_horizontal"
-        android:text="Login as an Admin"
+        android:text="@string/Login"
         android:textColor="@android:color/white"
-        android:textSize="36sp"
+        android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/imageView3"
-        app:layout_constraintHorizontal_bias="0.387"
+        app:layout_constraintHorizontal_bias="0.375"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

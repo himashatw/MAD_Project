@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "270768298398-ls1591j0ldku1p41b4h38hasp3dfhuvp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shoppingez",
+            "certificate_hash": "afaa6a592d457b57e3f02141d2f67c90ac686551"
+          }
+        },
+        {
           "client_id": "270768298398-b0atmm2s8qjdctkkmejuj2f4m2v08s9q.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

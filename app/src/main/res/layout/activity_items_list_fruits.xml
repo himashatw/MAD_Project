@@ -35,6 +35,8 @@
             android:text="@string/ListFruitsHeader"
             android:textColor="@color/Black"
             android:textSize="36dp" />
+
+
     </LinearLayout>
 
 

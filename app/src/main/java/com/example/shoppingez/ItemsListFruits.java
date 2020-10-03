@@ -38,10 +38,15 @@ public class ItemsListFruits extends AppCompatActivity implements ImageAdapter.O
     private List<Items> mUploads;
     private ImageView ivBack;
 
+    String email;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_items_list_fruits);
+
+        email=getIntent().getStringExtra("email");
+
 
         mRecyclerView = findViewById(R.id.rvImages);
         mRecyclerView.setHasFixedSize(true);
@@ -104,10 +109,21 @@ public class ItemsListFruits extends AppCompatActivity implements ImageAdapter.O
     @Override
     public void onItemClick(int position) {
         Intent intent = new Intent(getApplicationContext(), ItemProfile.class);
-        startActivity(intent);
+
         Items selectedItem = mUploads.get(position);
         final String selectedKey = selectedItem.getKey();
         Log.d("TAGkey", "onItemClick: "+selectedKey);
+
+
+//        Bundle extras =new Bundle();
+//        extras.putString("code",selectedKey);
+//        extras.putString("email",email);
+//        intent.putExtras(extras);
+
+        intent.putExtra("email",email);
+        intent.putExtra("code",selectedKey);
+
+        startActivity(intent);
 
     }
 

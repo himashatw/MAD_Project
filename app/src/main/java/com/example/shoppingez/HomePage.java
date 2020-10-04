@@ -8,18 +8,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.google.android.gms.actions.ItemListIntents;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class HomePage extends AppCompatActivity {
 
     CardView cardFruits, cardVegetables, cardBeverages, cardMeat, cardRice, cardSnacks;
     ImageView imgLogOut;
+    String email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+
+        email = getIntent().getStringExtra("email");
+
+
 
         cardFruits = findViewById(R.id.cardFruits);
         cardVegetables = findViewById(R.id.cardVegetables);
@@ -32,6 +36,8 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ItemsListFruits.class);
+                intent.putExtra("email",email);
+
                 startActivity(intent);
             }
         });

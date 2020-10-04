@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -39,11 +40,17 @@ public class ItemsListFruits extends AppCompatActivity implements ImageAdapter1.
     private ValueEventListener mDBListener;
     private List<Items> mUploads;
     private ImageView ivBack;
+    private ImageButton cartbtn;
+
+    String email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_items_list_fruits);
+
+        email=getIntent().getStringExtra("email");
+
 
         mRecyclerView = findViewById(R.id.rvImages);
         mRecyclerView.setHasFixedSize(true);
@@ -52,6 +59,7 @@ public class ItemsListFruits extends AppCompatActivity implements ImageAdapter1.
         mProgressCircle = findViewById(R.id.progress_circle);
 
         ivBack = findViewById(R.id.imageView4);
+        cartbtn=findViewById(R.id.cartbtn);
         //ivBack.bringToFront();
 
         ivBack.setOnClickListener(new View.OnClickListener() {
@@ -59,6 +67,16 @@ public class ItemsListFruits extends AppCompatActivity implements ImageAdapter1.
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), HomePage.class);
                 startActivity(intent);
+            }
+        });
+
+        cartbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(ItemsListFruits.this,Cart_activity.class);
+                startActivity(intent);
+
+
             }
         });
 
@@ -106,10 +124,21 @@ public class ItemsListFruits extends AppCompatActivity implements ImageAdapter1.
     @Override
     public void onItemClick(int position) {
         Intent intent = new Intent(getApplicationContext(), ItemProfile.class);
-        startActivity(intent);
+
         Items selectedItem = mUploads.get(position);
         final String selectedKey = selectedItem.getKey();
         Log.d("TAGkey", "onItemClick: "+selectedKey);
+
+
+//        Bundle extras =new Bundle();
+//        extras.putString("code",selectedKey);
+//        extras.putString("email",email);
+//        intent.putExtras(extras);
+
+        intent.putExtra("email",email);
+        intent.putExtra("code",selectedKey);
+
+        startActivity(intent);
 
     }
 

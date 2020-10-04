@@ -11,4 +11,10 @@
     <color name="grey">#DCD4D4</color>
     <color name="lightRed">#E31607</color>
     <color name="green">#49BD4F</color>
+    <color name="colorWhite">#fff</color>
+    <color name="colorGray01">#c9c9c9</color>
+    <color name="colorGray02">#959595</color>
+    <color name="colorBlack">#000</color>
+    <color name="ColorGreen">#43A047</color>
+    <color name="ColorGray">#f5f0f0</color>
 </resources>

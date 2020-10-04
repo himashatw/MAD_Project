@@ -165,7 +165,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/button5"
+                    android:id="@+id/btnLogout"
                     style="@style/buttonStyle3"
                     android:text="@string/reply"
                     android:background="@color/green"
@@ -239,7 +239,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/btnOrders"
                     style="@style/buttonStyle3"
                     android:text="@string/reply"
                     android:background="@color/green"
@@ -252,7 +252,7 @@
 
 
                 <Button
-                    android:id="@+id/button3"
+                    android:id="@+id/btnEdit"
                     style="@style/buttonStyle3"
                     android:text="@string/delete"
                     android:background="@color/lightRed"

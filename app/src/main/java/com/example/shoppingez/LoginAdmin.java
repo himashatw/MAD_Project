@@ -27,6 +27,7 @@ public class LoginAdmin extends AppCompatActivity {
     FirebaseAuth mFirebaseAuth;
     TextView SignUp;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
+    String myEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +59,7 @@ public class LoginAdmin extends AppCompatActivity {
                 if (mFireBaseUser != null) {
                     Toast toast = Toast.makeText(LoginAdmin.this, "You are logged in ", Toast.LENGTH_SHORT);
                     toast.show();
-                    String myEmail = mFireBaseUser.getEmail();
+                     myEmail = mFireBaseUser.getEmail();
                     Log.d("firebaseuser", "onAuthStateChanged: " + myEmail);
                     if (myEmail.equals("himashatw@gamil.com")) {
 
@@ -66,6 +67,7 @@ public class LoginAdmin extends AppCompatActivity {
                         startActivity(intent);
                     } else {
                         Intent intent = new Intent(LoginAdmin.this, HomePage.class);
+                        intent.putExtra("email",myEmail);
                         startActivity(intent);
                     }
 
@@ -107,6 +109,7 @@ public class LoginAdmin extends AppCompatActivity {
 
                                 } else {
                                     Intent intent = new Intent(LoginAdmin.this, HomePage.class);
+                                    intent.putExtra("email",myEmail);
                                     startActivity(intent);
                                 }
                             }
@@ -122,6 +125,7 @@ public class LoginAdmin extends AppCompatActivity {
 
                     } else {
                         Intent intent = new Intent(LoginAdmin.this, HomePage.class);
+                        intent.putExtra("email",myEmail);
                         startActivity(intent);
                     }
 

@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -37,6 +38,7 @@ public class ItemsListFruits extends AppCompatActivity implements ImageAdapter.O
     private ValueEventListener mDBListener;
     private List<Items> mUploads;
     private ImageView ivBack;
+    private ImageButton cartbtn;
 
     String email;
 
@@ -55,6 +57,7 @@ public class ItemsListFruits extends AppCompatActivity implements ImageAdapter.O
         mProgressCircle = findViewById(R.id.progress_circle);
 
         ivBack = findViewById(R.id.imageView4);
+        cartbtn=findViewById(R.id.cartbtn);
         //ivBack.bringToFront();
 
         ivBack.setOnClickListener(new View.OnClickListener() {
@@ -62,6 +65,16 @@ public class ItemsListFruits extends AppCompatActivity implements ImageAdapter.O
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), HomePage.class);
                 startActivity(intent);
+            }
+        });
+
+        cartbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(ItemsListFruits.this,Cart_activity.class);
+                startActivity(intent);
+
+
             }
         });
 

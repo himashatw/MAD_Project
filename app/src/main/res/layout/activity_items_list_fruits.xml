@@ -9,37 +9,51 @@
     android:background="@drawable/customborder"
     android:orientation="horizontal">
 
-    <LinearLayout
-        android:id="@+id/loutOne"
+    <RelativeLayout
+        android:id="@+id/layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/round_bg"
-        android:gravity="center_horizontal">
+        android:layout_height="88dp"
+        android:padding="10dp"
+        android:background="@drawable/shape_rect01">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/imageView4"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:clickable="true"
-            android:rotation="180"
-            app:srcCompat="@drawable/ic_launcher_arrow2_foreground" />
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_back_white"
+            android:background="@null"/>
 
         <TextView
             android:id="@+id/selectedCat"
-            android:layout_width="200dp"
-            android:layout_height="72dp"
-            android:layout_marginTop="16dp"
-            android:layout_gravity="center"
-            android:text="@string/ListFruitsHeader"
-            android:textColor="@color/Black"
-            android:textSize="36dp" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Fruits"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:textColor="@color/white"/>
+
+        <ImageButton
+            android:id="@+id/cartbtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:background="@null"
+            app:srcCompat="@drawable/ic_cart_white" />
 
 
-    </LinearLayout>
 
-
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/iconIv"
+        android:layout_width="40dp"
+        android:layout_height="48dp"
+        android:background="@drawable/shape_circle01"
+        android:layout_marginTop="60dp"
+        android:padding="5dp"
+        app:srcCompat="@drawable/ic_add_shopping_white"
+        android:layout_marginBottom="40dp"
+        android:layout_centerHorizontal="true"/>
     <ProgressBar
         android:id="@+id/progress_circle"
         android:layout_width="wrap_content"
@@ -51,7 +65,7 @@
         android:id="@+id/rvImages"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/loutOne"
+        android:layout_below="@+id/layout"
         android:layout_marginTop="32dp" />
 
 </RelativeLayout>

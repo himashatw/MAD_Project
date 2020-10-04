@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -116,7 +115,7 @@ public class ItemProfile extends AppCompatActivity {
 
                             Toast.makeText(ItemProfile.this, "Added to Cart to List", Toast.LENGTH_SHORT).show();
 
-                            Intent intent = new Intent(ItemProfile.this, HomePage.class);
+                            Intent intent = new Intent(ItemProfile.this, ItemsListFruits.class);
                             intent.putExtra("CartProductList", pro_name.getText().toString());/**PUT PRODUCT NAME FOR GETTING ORDER INFPRMATION*/
                             intent.putExtra("CartListQuantity", quantity_btn.getNumber());/**PUT PRODUCT QUANTITY FOR GETTING ORDER INFORMATION*/
                             startActivity(intent);
@@ -142,7 +141,7 @@ public class ItemProfile extends AppCompatActivity {
                     pro_name.setText(items.getItemName());
                     pro_price.setText(String.valueOf(items.getItemPrice()));
                     qnty.setText(items.getItemCategory());
-                    Picasso.with(context).load(items.getImgUrl()).into(product_img);
+                   //Picasso.with(context).load(items.getImgUrl()).into(product_img);
 
 
 

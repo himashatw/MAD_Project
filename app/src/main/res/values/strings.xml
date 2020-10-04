@@ -56,6 +56,7 @@
     <string name="editLname" />
     <string name="enquiries">Enquiries</string>
     <string name="Login">Login</string>
+    <string name="btnUpdate">UPDATE</string>
 
 
 </resources>

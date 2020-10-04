@@ -27,8 +27,16 @@
 
         </activity>
         <activity android:name=".Cart" />
-        <activity android:name=".Edit_Profile" />
-        <activity android:name=".profile" />
+        <activity android:name=".Edit_Profile" >
+
+        </activity>
+        <activity android:name=".profile" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ItemsListFruits"
             android:exported="true" />
@@ -46,11 +54,6 @@
             android:name=".LoginAdmin"
             android:exported="true">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
         <activity

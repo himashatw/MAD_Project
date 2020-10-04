@@ -9,15 +9,15 @@
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="466dp"
-        android:layout_height="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.641"
-        app:srcCompat="@drawable/ic_wawesa" />
+        app:srcCompat="@drawable/ic_wavehome" />
 
     <ImageView
         android:id="@+id/imageView10"
@@ -117,9 +117,20 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView10" />
 
     <TextView
-        android:id="@+id/txtEmail"
-        android:layout_width="232dp"
+        android:id="@+id/txtLname"
+        android:layout_width="116dp"
         android:layout_height="40dp"
+        android:layout_marginEnd="136dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtFname"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="32dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toTopOf="@+id/txtTelephone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.229"
@@ -129,20 +140,19 @@
 
     <TextView
         android:id="@+id/txtTelephone"
-        android:layout_width="232dp"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="24dp"
+        android:textSize="32dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.229"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
 
-    <TextView
-        android:id="@+id/txtLname"
-        android:layout_width="116dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="136dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/txtFname"
-        app:layout_constraintEnd_toEndOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -70,7 +70,7 @@
             android:name=".ItemProfile"
             android:exported="true" />
         <activity android:name=".enquiry2"></activity>
-        <activity android:name=".enquiry1"></activity>
+        <activity android:name=".enquiry1" android:exported="true"></activity>
         <activity android:name=".checkout2"></activity>
         <activity android:name=".checkout1"></activity>
         <activity android:name=".clickNotification"></activity>

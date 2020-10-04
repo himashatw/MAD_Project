@@ -11,12 +11,13 @@
         android:layout_width="300dp"
         android:layout_height="90dp"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/searchView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.047"
         app:srcCompat="@drawable/logo" />
 
     <SearchView
@@ -24,9 +25,11 @@
         android:layout_width="336dp"
         android:layout_height="54dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="100dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/round_border"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,9 +47,11 @@
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.01"
-        app:srcCompat="@drawable/ic_baseline_settings_24" />
+        android:rotation="180"
+        app:srcCompat="@drawable/ic_baseline_exit_to_app_24_blue" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="409dp"
         android:layout_height="512dp"
         android:layout_marginStart="1dp"
@@ -73,6 +78,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="106dp"
+                android:fontFamily="@font/open_sans_bold"
                 android:layout_marginBottom="26dp"
                 android:text="Categories"
                 android:textColor="@android:color/white"
@@ -94,6 +100,7 @@
             <!-- Column One -->
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardVegetables"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -182,6 +189,7 @@
             <!-- Column One -->
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardBeverages"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -202,8 +210,8 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="60dp"
-                        android:layout_marginTop="5dp"
                         android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
                         app:srcCompat="@drawable/ic_bevarages"></ImageView>
 
                     <TextView
@@ -224,6 +232,7 @@
             <!-- Column Two -->
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardMeat"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -266,6 +275,7 @@
             <!-- Column One -->
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardRice"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -307,6 +317,7 @@
             <!-- Column Two -->
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardSnacks"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"

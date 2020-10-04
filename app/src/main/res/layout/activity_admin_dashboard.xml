@@ -39,6 +39,7 @@
                 android:id="@+id/btnLogOut"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:rotation="180"
                 android:layout_alignParentRight="true"
                 android:background="@drawable/ic_baseline_exit_to_app_24" />
             

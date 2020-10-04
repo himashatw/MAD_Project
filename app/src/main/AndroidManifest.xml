@@ -11,14 +11,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OpeningActivity" android:exported="true">
+        <activity android:name=".ItemsListSnacks" android:exported="true"></activity>
+        <activity
+            android:name=".ItemsListRice"
+            android:exported="true" />
+        <activity
+            android:name=".ItemsListMeat"
+            android:exported="true" />
+        <activity
+            android:name=".ItemsListBevarages"
+            android:exported="true" />
+        <activity
+            android:name=".OpeningActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ItemsListVegetables" />
+        <activity
+            android:name=".ItemsListVegetables"
+            android:exported="true" />
         <activity android:name=".TestRegistration" />
         <activity
             android:name=".AdminEditItem"
@@ -48,9 +62,7 @@
             android:exported="true" />
         <activity
             android:name=".LoginAdmin"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".LoginCustomer"
             android:screenOrientation="portrait" />
@@ -65,11 +77,12 @@
         <activity
             android:name=".ItemProfile"
             android:exported="true" />
-        <activity android:name=".enquiry2"></activity>
-        <activity android:name=".enquiry1"></activity>
-        <activity android:name=".checkout2"></activity>
-        <activity android:name=".checkout1"></activity>
-        <activity android:name=".clickNotification"></activity>
+        <activity android:name=".enquiry2" />
+        <activity android:name=".enquiry1" />
+        <activity android:name=".checkout2" />
+        <activity android:name=".checkout1" />
+        <activity android:name=".clickNotification" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

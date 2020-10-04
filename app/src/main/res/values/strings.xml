@@ -48,6 +48,10 @@
     <string name="changeAddress">Change</string>
     <string name="enquiries">Enquiries</string>
     <string name="Login">Login</string>
+    <string name="ListBevaragesHeader">Bevarages</string>
+    <string name="ListMeatHeader">Meats</string>
+    <string name="ListRiceHeader">Rice</string>
+    <string name="ListSnacksHeader">Snacks</string>
 
 
 </resources>

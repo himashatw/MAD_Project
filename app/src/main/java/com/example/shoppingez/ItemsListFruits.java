@@ -2,6 +2,7 @@ package com.example.shoppingez;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -14,6 +15,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.shoppingez.adapter.ImageAdapter;
+import com.example.shoppingez.adapter.ImageAdapter1;
 import com.example.shoppingez.model.Items;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -25,11 +27,11 @@ import com.google.firebase.storage.FirebaseStorage;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ItemsListFruits extends AppCompatActivity implements ImageAdapter.OnItemClickListener{
+public class ItemsListFruits extends AppCompatActivity implements ImageAdapter1.OnItemClickListener{
 
 
     private RecyclerView mRecyclerView;
-    private ImageAdapter mAdapter;
+    private ImageAdapter1 mAdapter;
     private ProgressBar mProgressCircle;
 
     private FirebaseStorage mStorage;
@@ -45,7 +47,7 @@ public class ItemsListFruits extends AppCompatActivity implements ImageAdapter.O
 
         mRecyclerView = findViewById(R.id.rvImages);
         mRecyclerView.setHasFixedSize(true);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
 
         mProgressCircle = findViewById(R.id.progress_circle);
 
@@ -62,7 +64,7 @@ public class ItemsListFruits extends AppCompatActivity implements ImageAdapter.O
 
         mUploads = new ArrayList<>();
 
-        mAdapter = new ImageAdapter(ItemsListFruits.this, mUploads);
+        mAdapter = new ImageAdapter1(ItemsListFruits.this, mUploads);
 
         mRecyclerView.setAdapter(mAdapter);
         mAdapter.setOnItemClickListener(ItemsListFruits.this);
@@ -79,7 +81,7 @@ public class ItemsListFruits extends AppCompatActivity implements ImageAdapter.O
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     Items items = postSnapshot.getValue(Items.class);
                     items.setKey(postSnapshot.getKey());
-                    if (items.getItemCategory().equals("Fruits")){
+                    if ((items.getItemCategory().equals("Fruits")) ||(items.getItemCategory().equals("fruits")) ){
                         mUploads.add(items);
                     }
 

@@ -49,21 +49,23 @@ public class Cart_activity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Cart cart = null;
 
         final DatabaseReference cartListRef = FirebaseDatabase.getInstance().getReference().child("Cart");
 
         FirebaseRecyclerOptions<Cart> options = new FirebaseRecyclerOptions.Builder<Cart>()
-                .setQuery(cartListRef.child("himashatw@gmail"), Cart.class).build();
+                .setQuery(cartListRef
+                        .child("UserView"), Cart.class)
+                .build();
+
 
         FirebaseRecyclerAdapter<Cart, CartViewHolder> adapter = new FirebaseRecyclerAdapter<Cart, CartViewHolder>(options) {
 
 
             @Override
             protected void onBindViewHolder(@NonNull CartViewHolder holder, int position, @NonNull Cart model) {
-                holder.productName.setText(model.getPname());
-                holder.productPrice.setText(model.getPrice());
-                holder.productQnty.setText(model.getPquantity());
+                holder.pname.setText(model.getPname());
+                holder.price.setText(String.valueOf(model.getPrice()));
+                holder.pquantity.setText(model.getPquantity());
 
             }
 

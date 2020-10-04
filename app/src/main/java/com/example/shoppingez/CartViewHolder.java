@@ -10,15 +10,15 @@ import com.example.shoppingez.Interface.ItemClickListner;
 
 public class CartViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-    public TextView productName , productPrice ,productQnty;
+    public TextView pname , price ,pquantity;
     private ItemClickListner itemClickListner;
 
     public CartViewHolder(@NonNull View itemView) {
         super(itemView);
 
-        productName =itemView.findViewById(R.id.product_name_in_cart);
-        productPrice =itemView.findViewById(R.id.product_cart_price);
-        productQnty=itemView.findViewById(R.id.product_cart_quantity);
+        pname =itemView.findViewById(R.id.product_name_in_cart);
+        price =itemView.findViewById(R.id.product_cart_price);
+        pquantity=itemView.findViewById(R.id.product_cart_quantity);
     }
 
     @Override

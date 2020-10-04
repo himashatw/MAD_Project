@@ -1,25 +1,25 @@
 package com.example.shoppingez.model;
 
 public class Cart {
-    private String price,catogery,pname,pquantity;
+    private String pname,pquantity;
+    private double Pprice;
 
     public Cart(){
 
     }
 
-    public Cart(String price, String pname, String pquantity) {
-        this.price = price;
-        this.catogery = catogery;
+    public Cart(double price, String pname, String pquantity) {
+        this.Pprice = price;
         this.pname = pname;
         this.pquantity = pquantity;
     }
 
-    public String getPrice() {
-        return price;
+    public double getPrice() {
+        return Pprice;
     }
 
-    public void setPrice(String price) {
-        this.price = price;
+    public void setPrice(double price) {
+        this.Pprice = price;
     }
 
 

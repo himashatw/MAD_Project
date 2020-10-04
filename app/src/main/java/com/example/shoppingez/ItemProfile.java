@@ -98,13 +98,13 @@ public class ItemProfile extends AppCompatActivity {
 
         cartMap =new HashMap<>();
         cartMap.put("pname"         ,pro_name.getText().toString());
-        cartMap.put("Pprice"         ,pro_price.getText().toString());
+        cartMap.put("Pprice"         ,(Float.parseFloat(pro_price.getText().toString())));
         cartMap.put("pcatogery"         ,qnty.getText().toString());
         cartMap.put("pdate"         ,saveCurrentDate);
         cartMap.put("ptime"         ,saveCurrentTime);
         cartMap.put("pquantity"     ,quantity_btn.getNumber());
 
-        cartListRef.child(subString)
+        cartListRef.child("UserView")
                 .updateChildren(cartMap)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override

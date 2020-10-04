@@ -35,7 +35,7 @@
         <activity android:name=".MyOrder" />
         <activity android:name=".Registration" />
         <activity android:name=".Cart_activity" />
-        <activity android:name=".Edit_Profile" />
+        <activity android:name=".Edit_Profile" android:exported="true" />
         <activity android:name=".profile" />
         <activity
             android:name=".ItemsListFruits"

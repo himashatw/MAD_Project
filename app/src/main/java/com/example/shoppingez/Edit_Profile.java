@@ -42,7 +42,7 @@ public class Edit_Profile extends AppCompatActivity {
 
         final User user = new User();
 
-         btnUpdate = findViewById(R.id.btnUpdate);
+        btnUpdate = findViewById(R.id.btnUpdate);
 
         editFname.setText(fname);
         editLname.setText(lname);
@@ -52,35 +52,29 @@ public class Edit_Profile extends AppCompatActivity {
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DatabaseReference updRef = FirebaseDatabase.getInstance().getReference().child("User");
-                updRef.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        if (snapshot.hasChild("User1")){
-                            user.setFirstName(editFname.getText().toString().trim());
-                            user.setLastName(editLname.getText().toString().trim());
-                            user.setTelephone(Integer.parseInt(editTelephone.getText().toString().trim()));
+                user.setFirstName(editFname.getText().toString().trim());
+                user.setLastName(editLname.getText().toString().trim());
+                user.setTelephone(Integer.parseInt(editTelephone.getText().toString().trim()));
 
+                String fullEmail = email;
+                String filename = fullEmail;
 
-                            dbRef.child("User1").setValue(user);
+                int iend = filename.indexOf(".");
+                String subString = "ChildEmailNull";
+                if (iend != -1) {
+                    subString = filename.substring(0, iend);
 
-                            Toast.makeText(getApplicationContext(), "Profile Details Updated", Toast.LENGTH_SHORT).show();
+                }
 
-                        }
+                dbRef = FirebaseDatabase.getInstance().getReference().child("Users");
+                dbRef.child(subString).setValue(user);
 
-                    }
+                Toast.makeText(getApplicationContext(), "Profile Details Updated", Toast.LENGTH_SHORT).show();
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-                });
             }
+
+
         });
-
-
-
-        
-
     }
+
 }

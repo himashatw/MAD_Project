@@ -24,7 +24,7 @@
         android:layout_width="156dp"
         android:layout_height="42dp"
         android:background="@color/colorPrimary"
-        android:fontFamily="serif"
+        android:fontFamily="@font/open_sans_bold"
         android:text="Edit Profile"
         android:textColor="#FFFFFF"
         android:textSize="26sp"
@@ -37,18 +37,18 @@
         app:layout_constraintVertical_bias="0.082" />
 
     <LinearLayout
-        android:layout_width="405dp"
-        android:layout_height="540dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="69dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
+        android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6">
+        app:layout_constraintTop_toBottomOf="@+id/view4">
 
         <TextView
             android:id="@+id/textView20"
@@ -97,7 +97,7 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="none" />
 
         <TextView
             android:id="@+id/textView39"
@@ -118,6 +118,7 @@
             android:id="@+id/btnUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="16dp"
             android:background="@drawable/btn_rounded"
             android:text="@string/btnUpdate" />
 

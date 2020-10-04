@@ -47,7 +47,8 @@
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.01"
-        app:srcCompat="@drawable/ic_baseline_settings_24" />
+        android:rotation="180"
+        app:srcCompat="@drawable/ic_baseline_exit_to_app_24" />
 
     <ImageView
         android:id="@+id/imageView333"

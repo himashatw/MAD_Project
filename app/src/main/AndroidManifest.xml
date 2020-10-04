@@ -34,6 +34,7 @@
         <activity android:name=".Empty_Cart" />
         <activity android:name=".MyOrder" />
         <activity android:name=".Registration" />
+        <activity android:name=".Cart_activity" />
         <activity android:name=".Edit_Profile" />
         <activity android:name=".profile" />
         <activity

@@ -19,6 +19,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".ItemsListVegetables" />
+        <activity android:name=".ItemsListBevarages" />
+        <activity android:name=".ItemsListMeat" />
+        <activity android:name=".ItemsListRice" />
+        <activity android:name=".ItemsListSnacks" />
         <activity android:name=".TestRegistration" android:exported="true"/>
         <activity
             android:name=".AdminEditItem"
@@ -30,7 +34,6 @@
         <activity android:name=".Empty_Cart" />
         <activity android:name=".MyOrder" />
         <activity android:name=".Registration" />
-        <activity android:name=".Cart" />
         <activity android:name=".Edit_Profile" />
         <activity android:name=".profile" />
         <activity

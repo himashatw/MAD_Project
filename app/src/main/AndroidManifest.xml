@@ -11,19 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ItemsListSnacks" android:exported="true"></activity>
-        <activity
-            android:name=".ItemsListRice"
-            android:exported="true" />
-        <activity
-            android:name=".ItemsListMeat"
-            android:exported="true" />
-        <activity
-            android:name=".ItemsListBevarages"
-            android:exported="true" />
-        <activity
-            android:name=".OpeningActivity"
-            android:exported="true">
+        <activity android:name=".OpeningActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -60,7 +48,9 @@
             android:exported="true" />
         <activity
             android:name=".LoginAdmin"
-            android:exported="true" />
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".LoginCustomer"
             android:screenOrientation="portrait" />

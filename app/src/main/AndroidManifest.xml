@@ -30,7 +30,7 @@
         <activity android:name=".Empty_Cart" />
         <activity android:name=".MyOrder" />
         <activity android:name=".Registration" />
-        <activity android:name=".Cart" />
+        <activity android:name=".Cart_activity" />
         <activity android:name=".Edit_Profile" />
         <activity android:name=".profile" />
         <activity
@@ -39,7 +39,7 @@
         <activity
             android:name=".HomePage"
             android:exported="true"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".AdminItems"
             android:exported="true" />
@@ -49,7 +49,11 @@
         <activity
             android:name=".LoginAdmin"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".LoginCustomer"
@@ -65,14 +69,6 @@
         <activity
             android:name=".ItemProfile"
             android:exported="true" />
-        <activity android:name=".enquiry2"></activity>
-        <activity android:name=".enquiry1"></activity>
-        <activity android:name=".checkout2"></activity>
-        <activity android:name=".checkout1"></activity>
-        <activity android:name=".clickNotification"></activity>
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

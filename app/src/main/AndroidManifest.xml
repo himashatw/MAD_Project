@@ -11,7 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UserProfile"></activity>
+        <activity android:name=".OpeningActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".ItemsListVegetables" />
         <activity android:name=".TestRegistration" />
         <activity
@@ -54,6 +60,11 @@
             android:name=".LoginAdmin"
             android:exported="true">
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity
@@ -70,26 +81,14 @@
         <activity
             android:name=".ItemProfile"
             android:exported="true" />
-
-        <activity android:name=".enquiry2">
-
-
-        </activity>
-        <activity android:name=".enquiry1" >
-
-        </activity>
-        <activity android:name=".checkout2" >
-
-
-        </activity>
-        <activity android:name=".checkout1" >
-
-
-        </activity>
-
-
-
-
+        <activity android:name=".enquiry2"></activity>
+        <activity android:name=".enquiry1"></activity>
+        <activity android:name=".checkout2"></activity>
+        <activity android:name=".checkout1"></activity>
+        <activity android:name=".clickNotification"></activity>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

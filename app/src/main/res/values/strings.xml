@@ -60,6 +60,7 @@
     <string name="ListMeatHeader">Meats</string>
     <string name="ListRiceHeader">Rice</string>
     <string name="ListSnacksHeader">Snacks</string>
+    <string name="btnUpdate">Update</string>
 
 
 </resources>

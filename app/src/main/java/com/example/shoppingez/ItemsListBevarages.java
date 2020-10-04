@@ -103,11 +103,12 @@ public class ItemsListBevarages extends AppCompatActivity implements ImageAdapte
 
     @Override
     public void onItemClick(int position) {
-        Intent intent = new Intent(getApplicationContext(), ItemProfile.class);
-        startActivity(intent);
+
         Items selectedItem = mUploads.get(position);
         final String selectedKey = selectedItem.getKey();
         Log.d("TAGkey", "onItemClick: "+selectedKey);
+        Intent intent = new Intent(getApplicationContext(), ItemProfile.class);
+        startActivity(intent);
 
     }
 

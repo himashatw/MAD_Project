@@ -58,9 +58,7 @@ public class Registration extends AppCompatActivity {
                 else{
                     user.setFirstName(edFname.getText().toString().trim());
                     user.setLastName(edLname.getText().toString().trim());
-                    user.setEmail(edEmail.getText().toString().trim());
                     user.setTelephone(Integer.parseInt(edTelephone.getText().toString().trim()));
-                    user.setPassword(edPassword.getText().toString().trim());
 
                     dbRef.child("User1").setValue(user);
 

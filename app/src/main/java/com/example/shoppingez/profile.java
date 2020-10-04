@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -24,7 +26,7 @@ public class profile extends AppCompatActivity {
 
     public static final String FirstName = "Fname";
     public static final String LastName = "Lname";
-    public static final String Email = "Email";
+    String Email;
     public static final String Telephone = "Telephone";
 
 
@@ -44,8 +46,23 @@ public class profile extends AppCompatActivity {
         btnContact = findViewById(R.id.btnContact);
         btnLogout = findViewById(R.id.btnLogout);
 
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            Email = user.getEmail();
+        }
 
-        dbRef = FirebaseDatabase.getInstance().getReference().child("User/User1");
+        String fullEmail = Email;
+        String filename = fullEmail;
+
+        int iend = filename.indexOf(".");
+        String subString = "ChildEmailNull";
+        if (iend != -1){
+            subString = filename.substring(0,iend);
+
+        }
+
+
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Users").child(subString);
         dbRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -53,7 +70,7 @@ public class profile extends AppCompatActivity {
 
                 txtFname.setText(snapshot.child("firstName").getValue().toString());
                 txtLname.setText(snapshot.child("lastName").getValue().toString());
-                txtEmail.setText(snapshot.child("email").getValue().toString());
+                txtEmail.setText(Email);
                 txtTelephone.setText(snapshot.child("telephone").getValue().toString());
             }
 

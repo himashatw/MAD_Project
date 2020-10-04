@@ -59,7 +59,6 @@ public class Edit_Profile extends AppCompatActivity {
                         if (snapshot.hasChild("User1")){
                             user.setFirstName(editFname.getText().toString().trim());
                             user.setLastName(editLname.getText().toString().trim());
-                            user.setEmail(editEmail.getText().toString().trim());
                             user.setTelephone(Integer.parseInt(editTelephone.getText().toString().trim()));
 
 

@@ -13,7 +13,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class HomePage extends AppCompatActivity {
 
     CardView cardFruits, cardVegetables, cardBeverages, cardMeat, cardRice, cardSnacks;
-    ImageView imgLogOut;
+    ImageView imgLogOut, imgProfile;
     String email;
 
     @Override
@@ -23,7 +23,7 @@ public class HomePage extends AppCompatActivity {
 
         email = getIntent().getStringExtra("email");
 
-
+        imgProfile = findViewById(R.id.imageView333);
 
         cardFruits = findViewById(R.id.cardFruits);
         cardVegetables = findViewById(R.id.cardVegetables);
@@ -89,6 +89,14 @@ public class HomePage extends AppCompatActivity {
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(HomePage.this, LoginAdmin.class);
+                startActivity(intent);
+            }
+        });
+
+        imgProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomePage.this, profile.class);
                 startActivity(intent);
             }
         });

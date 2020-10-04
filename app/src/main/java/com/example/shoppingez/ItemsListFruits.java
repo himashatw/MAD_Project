@@ -73,9 +73,9 @@ public class ItemsListFruits extends AppCompatActivity implements ImageAdapter1.
         cartbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(ItemsListFruits.this,Cart_activity.class);
+               /* Intent intent =new Intent(ItemsListFruits.this,Cart_activity.class);
                 startActivity(intent);
-
+*/
 
             }
         });

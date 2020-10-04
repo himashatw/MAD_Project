@@ -31,7 +31,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ItemsListVegetables" />
-        <activity android:name=".TestRegistration" />
+        <activity android:name=".TestRegistration" android:exported="true"/>
         <activity
             android:name=".AdminEditItem"
             android:exported="true" />

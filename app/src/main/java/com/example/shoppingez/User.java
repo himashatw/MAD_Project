@@ -4,9 +4,8 @@ public class User {
 
     private String FirstName;
     private String LastName;
-    private String Email;
-    private Integer Telephone;
-    private String Password;
+    private int Telephone;
+
 
     public User() {
     }
@@ -27,27 +26,11 @@ public class User {
         LastName = lastName;
     }
 
-    public String getEmail() {
-        return Email;
-    }
-
-    public void setEmail(String email) {
-        Email = email;
-    }
-
-    public Integer getTelephone() {
+    public int getTelephone() {
         return Telephone;
     }
 
-    public void setTelephone(Integer telephone) {
+    public void setTelephone(int telephone) {
         Telephone = telephone;
-    }
-
-    public String getPassword() {
-        return Password;
-    }
-
-    public void setPassword(String password) {
-        Password = password;
     }
 }

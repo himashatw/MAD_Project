@@ -3,6 +3,7 @@ package com.example.shoppingez;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -22,6 +23,7 @@ public class TestRegistration extends AppCompatActivity {
     Button btnSignUp;
     FirebaseAuth mFirebaseAuth;
     TextView SignIn;
+    ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,9 @@ public class TestRegistration extends AppCompatActivity {
         setContentView(R.layout.activity_test_registration);
 
         mFirebaseAuth = FirebaseAuth.getInstance();
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setTitle("Please Wait");
+        progressDialog.setCanceledOnTouchOutside(false);
         emailId = findViewById(R.id.inputEmail);
         password = findViewById(R.id.inputPassword);
         btnSignUp = findViewById(R.id.btnSignUp);
@@ -67,6 +72,7 @@ public class TestRegistration extends AppCompatActivity {
                 else{
                     Toast toast = Toast.makeText(TestRegistration.this,"Error Occurred ",Toast.LENGTH_SHORT);
                     toast.show();
+
                 }
             }
         });

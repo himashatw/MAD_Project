@@ -79,7 +79,7 @@
         app:layout_constraintVertical_bias="0.123" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnEdit"
         style="@style/buttonStyle2"
         android:background="@color/lightBlue"
         android:text="@string/change"
@@ -105,7 +105,7 @@
         app:layout_constraintVertical_bias="0.87" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btnLogout"
         style="@style/buttonStyle2"
         android:layout_width="162dp"
         android:layout_height="46dp"

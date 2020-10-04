@@ -1,8 +1,5 @@
 package com.example.shoppingez;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -11,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -29,7 +27,8 @@ import com.google.firebase.storage.FirebaseStorage;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ItemsListVegetables extends AppCompatActivity implements ImageAdapter1.OnItemClickListener{
+
+public class ItemsListMeat extends AppCompatActivity implements ImageAdapter1.OnItemClickListener{
 
     private RecyclerView mRecyclerView;
     private ImageAdapter1 mAdapter;
@@ -44,7 +43,7 @@ public class ItemsListVegetables extends AppCompatActivity implements ImageAdapt
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_items_list_vegetables);
+        setContentView(R.layout.activity_items_list_meat);
 
         mRecyclerView = findViewById(R.id.rvImages);
         mRecyclerView.setHasFixedSize(true);
@@ -65,10 +64,10 @@ public class ItemsListVegetables extends AppCompatActivity implements ImageAdapt
 
         mUploads = new ArrayList<>();
 
-        mAdapter = new ImageAdapter1(ItemsListVegetables.this, mUploads);
+        mAdapter = new ImageAdapter1(ItemsListMeat.this, mUploads);
 
         mRecyclerView.setAdapter(mAdapter);
-        mAdapter.setOnItemClickListener(ItemsListVegetables.this);
+        mAdapter.setOnItemClickListener(ItemsListMeat.this);
 
         mStorage = FirebaseStorage.getInstance();
         mDatabaseRef = FirebaseDatabase.getInstance().getReference().child("Items");
@@ -82,7 +81,7 @@ public class ItemsListVegetables extends AppCompatActivity implements ImageAdapt
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     Items items = postSnapshot.getValue(Items.class);
                     items.setKey(postSnapshot.getKey());
-                    if (items.getItemCategory().equals("Vegetables") || items.getItemCategory().equals("vegetables")){
+                    if ((items.getItemCategory().equals("Meat")) ||(items.getItemCategory().equals("meat")) ){
                         mUploads.add(items);
                     }
 
@@ -106,9 +105,11 @@ public class ItemsListVegetables extends AppCompatActivity implements ImageAdapt
 
     @Override
     public void onItemClick(int position) {
-
         Intent intent = new Intent(getApplicationContext(), ItemProfile.class);
         startActivity(intent);
+        Items selectedItem = mUploads.get(position);
+        final String selectedKey = selectedItem.getKey();
+        Log.d("TAGkey", "onItemClick: "+selectedKey);
 
     }
 
